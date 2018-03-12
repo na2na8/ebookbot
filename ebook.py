@@ -34,9 +34,6 @@ def rm_html_tags(data) :
     p_text = re.sub(p, '', data)
     return p_text
 
-msgs = None
-with open('messages.json', 'rt', encoding ='UTF8') as fr:
-    msgs = json.loads(fr.read())
 def on_message(ws, message):
     message = json.loads(message)
     print(message)
